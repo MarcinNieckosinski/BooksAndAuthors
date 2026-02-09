@@ -12,9 +12,9 @@ class ApiClient:
         url = f"{self.base_url}{endpoint}" if endpoint is not None else f"{self.base_url}"
         return self.session.get(url, params=params, headers=self.headers)
 
-    def post(self, endpoint: str | None = None, params: Dict[str, Any] = None) -> requests.Response:
+    def post(self, endpoint: str | None = None, data: Any = None) -> requests.Response:
         url = f"{self.base_url}{endpoint}" if endpoint is not None else f"{self.base_url}"
-        return self.session.post(url, params=params, headers=self.headers)
+        return self.session.post(url, json=data, headers=self.headers)
 
     def put(self, endpoint: str | None = None, params: Dict[str, Any] = None) -> requests.Response:
         url = f"{self.base_url}{endpoint}" if endpoint is not None else f"{self.base_url}"

@@ -1,4 +1,9 @@
 {
+  "ENDPOINTS": {
+    "AUTHORS": "/Authors",
+    "AUTHORS_ID": "/Authors/{}",
+    "AUTHORS_BY_BOOKID": "Authors/authors/books/{}"
+  },
   "EXISTING_AUTHOR_ID_DATA": {
     "id": 45,
     "firstName": "First Name 45",
