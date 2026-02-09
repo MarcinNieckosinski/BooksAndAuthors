@@ -1,11 +1,10 @@
 import requests
 from typing import Dict, Any
-from tests.conftest import api_url
 
 
 class ApiClient:
-    def __init__(self, api_url, headers: Dict[str, str] = None):
-        self.base_url = api_url
+    def __init__(self, base_url, headers: Dict[str, str] = None):
+        self.base_url = base_url
         self.headers = headers or {}
         self.session = requests.Session()
 
