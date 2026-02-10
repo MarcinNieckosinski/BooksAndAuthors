@@ -8,8 +8,9 @@ def api_client(base_url="https://fakerestapi.azurewebsites.net/api/v1/") -> ApiC
     return ApiClient(base_url=base_url)
 
 @pytest.fixture
-def authors_data():
-    with open('../../../data/Authors/authors_data.json') as data_file:
-        data = json.load(data_file)
+def authors_data(pytestconfig):
+    root = pytestconfig.rootpath
+    file_path = root / "..\\data\\Authors\\authors_data.json"
+    data = json.loads(file_path.read_text())
 
     return data

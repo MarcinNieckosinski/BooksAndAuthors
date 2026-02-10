@@ -16,9 +16,9 @@ class ApiClient:
         url = f"{self.base_url}{endpoint}" if endpoint is not None else f"{self.base_url}"
         return self.session.post(url, json=data, headers=self.headers)
 
-    def put(self, endpoint: str | None = None, params: Dict[str, Any] = None) -> requests.Response:
+    def put(self, endpoint: str | None = None, data: Any = None) -> requests.Response:
         url = f"{self.base_url}{endpoint}" if endpoint is not None else f"{self.base_url}"
-        return self.session.put(url, params=params, headers=self.headers)
+        return self.session.put(url, json=data, headers=self.headers)
 
     def delete(self, endpoint: str | None = None, params: Dict[str, Any] = None) -> requests.Response:
         url = f"{self.base_url}{endpoint}" if endpoint is not None else f"{self.base_url}"
