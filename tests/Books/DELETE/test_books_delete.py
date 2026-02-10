@@ -1,3 +1,8 @@
+import pytest
+
+
+@pytest.mark.books
+@pytest.mark.delete
 class TestBooksDelete:
     def test_response_code(self, api_client, books_data):
         response = api_client.delete(books_data["ENDPOINTS"]["BOOKS_ID"].format(12))

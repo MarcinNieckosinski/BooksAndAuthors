@@ -1,6 +1,9 @@
 from src.utils import is_iso_date
+import pytest
 
 
+@pytest.mark.books
+@pytest.mark.put
 class TestBooksPut:
     def test_empty_request_response_code(self, api_client, books_data):
         response = api_client.put(books_data["ENDPOINTS"]["BOOKS_ID"].format(0))

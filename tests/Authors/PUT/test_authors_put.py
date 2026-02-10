@@ -1,3 +1,8 @@
+import pytest
+
+
+@pytest.mark.authors
+@pytest.mark.put
 class TestAuthorsPost:
     def test_empty_request_response_code(self, api_client, authors_data):
         response = api_client.put(authors_data["ENDPOINTS"]["AUTHORS_ID"].format(0))

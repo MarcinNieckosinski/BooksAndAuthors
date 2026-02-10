@@ -1,3 +1,8 @@
+import pytest
+
+
+@pytest.mark.authors
+@pytest.mark.get
 class TestAuthorsByBookIdGet:
     def test_response_code(self, api_client, authors_data):
         response = api_client.get(authors_data["ENDPOINTS"]["AUTHORS_BY_BOOKID"].format(1))

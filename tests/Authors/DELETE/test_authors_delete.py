@@ -1,3 +1,8 @@
+import pytest
+
+
+@pytest.mark.authors
+@pytest.mark.delete
 class TestAuthorsDelete:
     def test_response_code(self, api_client, authors_data):
         response = api_client.delete(authors_data["ENDPOINTS"]["AUTHORS_ID"].format(1))
