@@ -1,6 +1,14 @@
 {
   "ENDPOINTS": {
-    "BOOKS": "/api/v1/Books",
+    "BOOKS": "/Books",
     "BOOKS_ID": "/Books/{}"
+  },
+  "EXISTING_BOOK_DATA": {
+    "id": 67,
+    "title": "Book 67",
+    "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "pageCount": 6700,
+    "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+    "publishDate": "2025-12-05T10:22:15.1684396+00:00"
   }
 }
