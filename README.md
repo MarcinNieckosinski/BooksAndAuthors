@@ -10,13 +10,21 @@ Although simple, it can serve as a foundation for coding exercises, interviews, 
 **Project structure**
 
 BooksAndAuthors/
+
 ├── data/              # Input data used by the application
+
 ├── src/               # Source code (utils)
+
 ├── tests/             # Unit tests (pytest)
+
 ├── Dockerfile         # Containerization setup
+
 ├── Jenkinsfile        # CI/CD pipeline definition
+
 ├── requirements.txt   # Python dependencies
+
 ├── Pipfile / Pipfile.lock  # Alternative dependency management
+
 └── pytest.ini         # Pytest configuration
 
 **Prerequisites**
