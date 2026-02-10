@@ -9,7 +9,7 @@ def api_client(base_url="https://fakerestapi.azurewebsites.net/api/v1/") -> ApiC
     return ApiClient(base_url=base_url)
 
 @pytest.fixture
-def authors_data(pytestconfig):
+def books_data(pytestconfig):
     path = Path(__file__).resolve()
     root = ''
     for parent in [path] + list(path.parents):
@@ -19,7 +19,7 @@ def authors_data(pytestconfig):
         if (parent / ".lock").exists():
             root = parent
             break
-    file_path = root / "data\\Authors\\authors_data.json"
+    file_path = root / "data\\Books\\books_data.json"
     data = json.loads(file_path.read_text())
 
     return data

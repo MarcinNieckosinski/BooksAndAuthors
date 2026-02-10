@@ -1,0 +1,6 @@
+{
+  "ENDPOINTS": {
+    "BOOKS": "/api/v1/Books",
+    "BOOKS_ID": "/Books/{}"
+  }
+}
