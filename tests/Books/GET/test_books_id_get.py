@@ -1,7 +1,7 @@
 from src.utils import is_iso_date
 
 
-class TestAuthorsGet:
+class TestBooksIdGet:
     def test_response_code(self, api_client, books_data):
         response = api_client.get(books_data["ENDPOINTS"]["BOOKS_ID"].format(11))
         assert response.status_code == 200
